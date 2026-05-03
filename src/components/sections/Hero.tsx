@@ -116,7 +116,11 @@ export default function Hero() {
             View Projects
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </ButtonLink>
-          <ButtonLink href={personal.resumeUrl} variant="outline" download>
+          <ButtonLink
+            href={personal.resumeUrl}
+            variant="outline"
+            download={personal.resumeDownloadName}
+          >
             <Download className="h-4 w-4" /> Download Resume
           </ButtonLink>
           <ButtonLink href="#contact" variant="ghost">

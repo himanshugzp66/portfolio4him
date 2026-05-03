@@ -140,7 +140,7 @@ export default function Navbar() {
             </a>
             <a
               href={personal.resumeUrl}
-              download
+              download={personal.resumeDownloadName}
               className="group hidden items-center gap-2 rounded-full bg-gradient-to-r from-accent-cyan to-accent-violet p-[1px] md:flex"
             >
               <span className="flex items-center gap-2 rounded-full bg-ink-950 px-3 py-1.5 text-xs font-medium text-white transition group-hover:bg-ink-950/60">
@@ -220,7 +220,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href={personal.resumeUrl}
-                  download
+                  download={personal.resumeDownloadName}
                   aria-label="Download Resume"
                   className="grid h-11 w-11 place-items-center rounded-full border border-white/10 transition hover:bg-white/5"
                 >

@@ -139,7 +139,7 @@ export default function Contact() {
                 <ButtonLink
                   href={personal.resumeUrl}
                   variant="primary"
-                  download
+                  download={personal.resumeDownloadName}
                 >
                   <Download className="h-4 w-4" /> Resume
                 </ButtonLink>

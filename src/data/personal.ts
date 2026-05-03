@@ -17,6 +17,7 @@ export const personal = {
   github: "https://github.com/himanshugzp66",
   linkedin: "https://www.linkedin.com/in/himanshu-pandey-b20021237/",
   resumeUrl: "/resume.pdf",
+  resumeDownloadName: "Himanshu_Pandey_Resume.pdf",
 };
 
 export type Personal = typeof personal;
