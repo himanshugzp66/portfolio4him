@@ -1,0 +1,28 @@
+# =============================================================================
+# Netlify configuration for Himanshu Pandey portfolio
+# Reference: https://docs.netlify.com/integrations/frameworks/next-js/
+# =============================================================================
+
+[build]
+  command  = "npm run build"
+  publish  = ".next"
+
+[build.environment]
+  NODE_VERSION             = "22"
+  NPM_FLAGS                = "--no-audit --no-fund"
+  NEXT_TELEMETRY_DISABLED  = "1"
+
+# Official Next.js Runtime — required for App Router, server components,
+# API routes, ISR, image optimization and middleware.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Security headers applied to every response.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options    = "nosniff"
+    X-Frame-Options           = "SAMEORIGIN"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
